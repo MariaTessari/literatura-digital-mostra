@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicial</title>
+    <title>Literatura Digital</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <header class="cabecalho">
+        <nav>
+            <ul class="menu">
+                <li><a class="botao-nav" href="#">Início</a></li>
+                <li><a class="botao-nav" href="#">História</a></li>
+                <li><a class="botao-nav" href="saiba-mais">Saiba Mais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="playlist">
+        <h1>Playlist da História:</h1>
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/1zv61Zt51IT7pCYoa7rVtX?utm_source=generator&si=7d6cbf060c034e33"
+            width="100%" height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </main>
+
+    <hr>
+    <br>
+    <br>
+        <br>
+        <h1>PERSONAGENS: </h1>
+        <p class="subtitulo">Conheça mais sobre os personagens de "Antes que a Boca Fale" abaixo.</p>
+        <div class="container-cards">
+
+
+            <!-- CARD 1 -->
+            <div class="card-personagem">
+                <img src="imagens/bento-foto.png" alt="Bento" class="foto-personagem">
+                <h2>Bento Cardoso</h2>
+                <a href="#detalhes-p2" class="botao-expande">Saiba Mais</a>
+            </div>
+
+            <div id="detalhes-p2" class="modal-sobreposicao">
+                <div class="modal-conteudo">
+                    <a href="#" class="botao-fechar">&times;</a>
+                    <img src="imagens/bento-foto.png" alt="Bento" class="foto-modal">
+                    <h3>Bento Cardoso - PRINCIPAL SUSPEITO</h3>
+                    <p>Detalhes e história do segundo personagem aqui.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card-personagem">
+                <img src="imagens/clara.png" alt="Clara" class="foto-personagem">
+                <h2>Clara Santos</h2>
+                <a href="#detalhes-p1" class="botao-expande">Saiba Mais</a>
+            </div>
+
+            <div id="detalhes-p1" class="modal-sobreposicao">
+                <div class="modal-conteudo">
+                    <a href="#" class="botao-fechar">&times;</a>
+                    <img src="imagens/clara.png" alt="Clara" class="foto-modal">
+                    <h3>Clara Santos - DESAPARECIDA</h3>
+                    <p>Detalhes e história do primeiro personagem aqui.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card-personagem">
+                <img src="imagens/edvaldo.png" alt="Edvaldo" class="foto-personagem">
+                <h2>Edvaldo Neto</h2>
+                <a href="#detalhes-p3" class="botao-expande">Saiba Mais</a>
+            </div>
+
+            <div id="detalhes-p3" class="modal-sobreposicao">
+                <div class="modal-conteudo">
+                    <a href="#" class="botao-fechar">&times;</a>
+                    <img src="imagens/edvaldo.png" alt="Edvaldo" class="foto-modal">
+                    <h3>Edvaldo Neto - INVESTIGADOR</h3>
+                    <p>Detalhes e história do terceiro personagem aqui.</p>
+                </div>
+            </div>
+
+        </div>
+  
+
+
+
+
+
 </body>
+
 </html>

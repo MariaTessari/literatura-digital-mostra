@@ -22,6 +22,156 @@ body {
     justify-content: center;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.botao-nav.ativo {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ===== SEÇÃO HERO / PORTADA ===== */
+.hero {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 76px);
+    /* background:
+        radial-gradient(circle at 15% 20%, rgba(76, 24, 24, 0.4), transparent 55%),
+        radial-gradient(circle at 90% 85%, rgba(76, 24, 24, 0.28), transparent 50%),
+        linear-gradient(180deg, #181515 0%, #3a1a1a 100%); */
+}
+
+/* Coluna visual (esquerda) */
+.hero-visual {
+    position: relative;
+    flex: 0 0 46%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+/* Coluna de conteúdo (direita) */
+.hero-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 90px 70px;
+}
+
+.hero-titulo {
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero-subtitulo {
+    color: #c4b3b3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero-sinopse {
+    color: #c4b3b3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 560px;
+    margin: 0 0 40px 0;
+}
+
+.hero-botoes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.botao-cta {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #e0e0e0;
+    background-color: #641f1f;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: 1px solid #641f1f;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.botao-cta:hover {
+    background-color: #c4b3b3;
+    color: #181515;
+    border-color: #c4b3b3;
+}
+
+.botao-cta.secundario {
+    background-color: transparent;
+    border-color: #641f1f;
+    color: #e0e0e0;
+}
+
+.botao-cta.secundario:hover {
+    background-color: #641f1f;
+    color: #e0e0e0;
+}
+/* ===== RESPONSIVO: EMPILAR COLUNAS EM TELAS MENORES ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-visual {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 320px;
+    }
+
+    .hero-conteudo {
+        padding: 60px 28px;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-titulo {
+        font-size: 34px;
+    }
+
+    .hero-subtitulo {
+        font-size: 17px;
+    }
 }
 
 .menu {

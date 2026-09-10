@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literatura Digital</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo.png">
 </head>
 
 <body>
@@ -14,24 +15,27 @@
         <nav>
             <ul class="menu">
                 <li><a class="botao-nav" href="#">Início</a></li>
-                <li><a class="botao-nav" href="#">História</a></li>
-                <li><a class="botao-nav" href="saiba-mais">Saiba Mais</a></li>
+                <li><a class="botao-nav" href="historia.html">História</a></li>
+                <li><a class="botao-nav" href="#playlist">playlist</a></li>
+                <li><a class="botao-nav" href="#personagens">personagens</a></li>
+                <li><a class="botao-nav" href="#">Saiba Mais</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="playlist">
-        <h1>Playlist da História:</h1>
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/1zv61Zt51IT7pCYoa7rVtX?utm_source=generator&si=7d6cbf060c034e33"
-            width="100%" height="352" frameBorder="0" allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </main>
+    <div class="playlist-info" id="playlist">
+        <main class="playlist">
+            <h1>Playlist da História:</h1>
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/1zv61Zt51IT7pCYoa7rVtX?utm_source=generator&si=7d6cbf060c034e33"
+                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </main>
+    </div>
 
     <hr>
-    <br>
-    <br>
-        <br>
+    <div class="info-perso" id="personagens">
         <h1>PERSONAGENS: </h1>
         <p class="subtitulo">Conheça mais sobre os personagens de "Antes que a Boca Fale" abaixo.</p>
         <div class="container-cards">
@@ -49,7 +53,11 @@
                     <a href="#" class="botao-fechar">&times;</a>
                     <img src="imagens/bento-foto.png" alt="Bento" class="foto-modal">
                     <h3>Bento Cardoso - PRINCIPAL SUSPEITO</h3>
-                    <p>Detalhes e história do segundo personagem aqui.</p>
+                    <p>Oficial do Exército vindo de uma família influente, Bento esconde um comportamento possessivo e
+                        manipulador por trás da imagem de rapaz cortês. Incapaz de aceitar a rejeição e temendo ter sua
+                        reputação destruída no batalhão, ele se aproveita do clima de impunidade e autoritarismo da
+                        época
+                        para silenciar Clara. Encarna o machismo e o abuso de poder institucional.</p>
                 </div>
             </div>
 
@@ -65,7 +73,12 @@
                     <a href="#" class="botao-fechar">&times;</a>
                     <img src="imagens/clara.png" alt="Clara" class="foto-modal">
                     <h3>Clara Santos - DESAPARECIDA</h3>
-                    <p>Detalhes e história do primeiro personagem aqui.</p>
+                    <p>Jovem de 21 anos, natural de Florianópolis, Clara representa a busca por autonomia em meio à
+                        opressão
+                        dos Anos de Chumbo. Ao tentar romper um relacionamento sufocante e impor seus limites, torna-se
+                        vítima do próprio ex-namorado. Sua trajetória reflete as marcas do trauma, a força da
+                        resistência e
+                        o apagamento vivenciado por tantas pessoas durante a ditadura militar.</p>
                 </div>
             </div>
 
@@ -81,12 +94,19 @@
                     <a href="#" class="botao-fechar">&times;</a>
                     <img src="imagens/edvaldo.png" alt="Edvaldo" class="foto-modal">
                     <h3>Edvaldo Neto - INVESTIGADOR</h3>
-                    <p>Detalhes e história do terceiro personagem aqui.</p>
+                    <p>Investigador encarregado do caso em 1974, Neto é um policial obstinado que busca a verdade sobre
+                        o
+                        sumiço de Clara. Preso entre o dever profissional e a paranoia constante de cruzar o caminho de
+                        órgãos como o DOPS, sua investigação expõe a impotência da justiça comum frente à farda e o medo
+                        que
+                        ditava as regras daquele período.</p>
                 </div>
             </div>
 
         </div>
-  
+
+    </div>
+
 
 
 

@@ -1,0 +1,108 @@
+/* ==========================================
+   PLAYLIST COMPACTA (FININHA)
+   ========================================== */
+.playlist-info-historia {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto 20px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.playlist-subtitulo {
+    color: #c4b3b3;
+    font-size: 0.85rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin-bottom: 8px;
+}
+
+.secao-jogo {
+    width: 100%;
+    max-width: 900px; /* Card bem mais largo */
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card-interativo {
+    background-color: #0f0f11; /* Cor escura alinhada ao footer */
+    border: 1px solid #641f1f;
+    border-radius: 8px; /* Cantos sutis e menos redondos */
+    padding: 40px;
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    color: #c4b3b3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(196, 179, 179, 0.3);
+    padding-bottom: 4px;
+}
+
+.texto-historia {
+    color: #e4e4e7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    transition: opacity 0.2s ease-in-out;
+    text-align: center;
+}
+
+.container-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.botao-opcao {
+    background: transparent;
+    color: #c4b3b3;
+    border: 1px solid rgba(196, 179, 179, 0.2);
+    padding: 16px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botao-opcao:hover {
+    background: #0f0f11;
+    color: #641f1f;
+    border-color: #641f1f;
+}
+
+.botao-opcao .seta {
+    color: #c4b3b3;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   INDICADOR DE PROGRESSO
+   ========================================== */
+.progresso-container {
+    margin-top: 14px;
+    padding-left: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem; /* Bem pequeno */
+    color: rgba(196, 179, 179, 0.5); /* Cor suave */
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: left;
+}
+
+#caminho-progresso {
+    color: #c4b3b3;
+    font-weight: 500;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/historia.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>História</title>
+    <title>História - Antes que a Boca Fale</title>
 </head>
 
 <body>
@@ -19,16 +19,52 @@
                 <li><a class="botao-nav" href="index.html#playlist">playlist</a></li>
                 <li><a class="botao-nav" href="index.html#personagens">personagens</a></li>
                 <li><a class="botao-nav" href="#footer">sobre nós</a></li>
-                
             </ul>
         </nav>
     </header>
 
+    <div class="historia">
+        <br>
+        <h1 class="hero-titulo">Antes que a Boca Fale</h1>
+    </div>
 
-    <footer class="footer">
+    <div class="playlist-info-historia" id="playlist">
+        <main class="playlist">
+            <p class="playlist-subtitulo">Dê play para acompanhar com a trilha sonora</p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/1zv61Zt51IT7pCYoa7rVtX?utm_source=generator&si=7d6cbf060c034e33"
+                width="100%" height="80" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </main>
+    </div>
+
+  
+
+    <section class="secao-jogo">
+    <div class="card-interativo">
+        <div class="card-header">
+            <span id="tag-cena" class="tag">Início</span>
+        </div>
+        <div class="card-body">
+            <p id="texto-cena" class="texto-historia">
+                Carregando história...
+            </p>
+        </div>
+        <div id="opcoes-cena" class="container-opcoes">
+            <!-- Os botões aparecem aqui -->
+        </div>
+    </div>
+
+    <!-- TEXTO DE PROGRESSO (FORA E ABAIXO DO CARD) -->
+    <div class="progresso-container">
+        Progresso: <span id="caminho-progresso">Início</span>
+    </div>
+</section>
+
+    <footer class="footer" id="footer">
         <div class="footer-grid">
-
-            <!-- Marca -->
+          
             <div class="footer-brand">
                 <img src="imagens/logo.png" alt="Logo Literatura Digital" class="footer-logo">
                 <div class="footer-brand-texto">
@@ -37,41 +73,37 @@
                 </div>
             </div>
 
-            <!-- Créditos / Autores -->
+       
             <div class="footer-secao footer-credits">
                 <h3 class="footer-titulo-secao">Projeto realizado por</h3>
                 <ul class="footer-lista">
-                    <li class="footer-item"><a href="#" class="footer-link">Maria Eduarda Tessari</a></li>
-                    <li class="footer-item"><a href="#" class="footer-link">João Victor Prange Hartmann</a></li>
-                    <li class="footer-item"><a href="#" class="footer-link">Júlia Verissímo</a></li>
+                    <li class="footer-item"><a href="" class="footer-link">Maria Eduarda Tessari</a></li>
+                    <li class="footer-item"><a href="" class="footer-link">João Victor Prange Hartmann</a></li>
+                    <li class="footer-item"><a href="" class="footer-link">Júlia Verissímo</a></li>
                 </ul>
             </div>
 
-            <!-- Instagram -->
+        
             <div class="footer-secao footer-social">
                 <h3 class="footer-titulo-secao">Siga-nos</h3>
                 <ul class="footer-lista">
                     <li class="footer-item">
-                        <a href="https://instagram.com/madutessari" target="_blank" rel="noopener"
-                            class="footer-link footer-ig">
+                        <a href="https://instagram.com/madutessari" target="_blank" rel="noopener" class="footer-link footer-ig">
                             <span class="footer-icone">@</span> @madutessari
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="https://instagram.com/jjoao_hartmann" target="_blank" rel="noopener"
-                            class="footer-link footer-ig">
+                        <a href="https://instagram.com/jjoao_hartmann" target="_blank" rel="noopener" class="footer-link footer-ig">
                             <span class="footer-icone">@</span> jjoao_hartmann
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="https://instagram.com/jufalcaov" target="_blank" rel="noopener"
-                            class="footer-link footer-ig">
+                        <a href="https://instagram.com/jufalcaov" target="_blank" rel="noopener" class="footer-link footer-ig">
                             <span class="footer-icone">@</span> @jufalcaov
                         </a>
                     </li>
                 </ul>
             </div>
-
         </div>
 
         <div class="footer-divisor"></div>
@@ -81,6 +113,73 @@
             <p class="footer-nota">Projeto de literatura digital e memória.</p>
         </div>
     </footer>
+
+    <!-- LÓGICA DA HISTÓRIA INTERATIVA COMPLETA -->
+    <script>
+       const historia = {
+            'inicio': {
+                tag: "Por onde começar?",
+                texto: "Escolha por qual perspectiva ou momento da história você gostaria de iniciar:",
+                opcoes: [
+                    { texto: "O passado em que se conheceram", proximaCena: 'cena_passado' },
+                    { texto: "A noite em que tudo aconteceu", proximaCena: 'cena_noite' },
+                    { texto: "O presente", proximaCena: 'cena_presente' }
+                ]
+            },
+            'cena_passado': {
+                tag: "Quando se conheceram",
+                texto: "Certo dia, Clara, uma jovem de 21 anos, natural de Florianópolis, conheceu Bento, um rapaz gentil e humilde, vindo de uma família nobre. Durante uma manifestação contra a ditadura, Clara ficou confusa e assustada com a possibilidade de os militares chegarem. Em meio ao desespero, um leve toque em seu braço a despertou. Era Bento, um jovem alto e fardado, que demonstrava preocupação com ela. A partir daquele momento, iniciou-se uma amizade marcada pela confiança e pelo respeito. Os dois passaram a se encontrar sempre que podiam, até mesmo quando Clara ia buscá-lo após seus plantões no batalhão. Com o tempo, Bento percebeu que seus sentimentos por Clara haviam mudado. Sentia ciúmes quando outros homens se aproximavam dela e tinha medo de descobrir que não era correspondido. Começou a demonstrar seu interesse, dizendo que seriam um belo casal e concordando quando alguém perguntava se estavam juntos. Clara, porém, nunca respondia da mesma forma, o que o deixava cada vez mais frustrado. Posteriormente, Bento tornou-se agressivo e controlador, querendo Clara somente para si. Ficava irritado quando ela não dizia onde estava ou quando conversava com pessoas que ele não conhecia. Diante daquela situação, Clara passou a não saber qual decisão tomar.",
+                opcoes: [
+                    { texto: "Abrir a carta e ler em voz alta", proximaCena: 'cena_ler_carta' },
+                    { texto: "Guardar a carta e procurar João", proximaCena: 'cena_procurar_joao' }
+                ]
+            },
+       };
+
+       // Array para guardar o histórico de escolhas
+let historicoCaminho = [];
+
+function carregarCena(chaveCena) {
+    const cena = historia[chaveCena];
+    if (!cena) return;
+
+    // Se voltar ao início, reseta o histórico; caso contrário, adiciona a nova cena
+    if (chaveCena === 'inicio') {
+        historicoCaminho = [cena.tag];
+    } else {
+        historicoCaminho.push(cena.tag);
+    }
+
+    // Atualiza a linha de progresso separando os passos por setas
+    document.getElementById('caminho-progresso').innerText = historicoCaminho.join(' → ');
+
+    // Atualiza os dados do card
+    document.getElementById('tag-cena').innerText = cena.tag;
+
+    const elementoTexto = document.getElementById('texto-cena');
+    elementoTexto.style.opacity = 0;
+    
+    setTimeout(() => {
+        elementoTexto.innerText = cena.texto;
+        elementoTexto.style.opacity = 1;
+    }, 150);
+
+    const containerOpcoes = document.getElementById('opcoes-cena');
+    containerOpcoes.innerHTML = '';
+
+    cena.opcoes.forEach(opcao => {
+        const botao = document.createElement('button');
+        botao.classList.add('botao-opcao');
+        botao.innerHTML = `<span>${opcao.texto}</span> <span class="seta">→</span>`;
+        botao.onclick = () => carregarCena(opcao.proximaCena);
+        containerOpcoes.appendChild(botao);
+    });
+}
+
+        window.onload = () => {
+            carregarCena('inicio');
+        };
+    </script>
 </body>
 
 </html>

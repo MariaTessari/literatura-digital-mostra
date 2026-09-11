@@ -528,3 +528,23 @@ h1 {
         gap: 32px;
     }
 }
+
+.album-capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    margin-right: 250px;
+}
+
+.album-capa img {
+    border-radius: 20px; 
+    max-width: 100%;
+    height: auto;
+}
+
+.album-capa .botao-cta {
+    align-self: center; 
+    margin: 0 !important; 
+}
